@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.DS_Store
+.venv/
+corpus/cache/
+corpus/filings_index.parquet
+data/
+.env

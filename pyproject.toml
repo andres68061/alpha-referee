@@ -1,0 +1,16 @@
+[project]
+name = "alpha-referee"
+version = "0.1.0"
+description = "Pre-registered replication harness for text-derived equity signals"
+requires-python = ">=3.12"
+dependencies = ["pandas>=2", "pyarrow", "numpy", "scipy", "requests", "scikit-learn"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.setuptools.packages.find]
+include = ["referee*", "trials*", "corpus*", "signals*", "adapters*", "report*"]
