@@ -6,19 +6,28 @@ could have read it. It is not ``filingDate`` (a date, no time, occasionally a
 day later) and it is emphatically not the fiscal period end, which is what a
 careless replication aligns on and which sits two to three months in the past.
 
-Everything here is cached by accession number. A filing is downloaded once.
+Everything here is cached by accession number. A filing is downloaded once —
+and the **raw HTML** is what gets cached, gzipped, not just the extracted text.
+The first version of this client kept only the derived text, which meant the
+corpus could not survive a change of parser without a full re-download. Text is
+cheap to re-derive from HTML; HTML is expensive to re-fetch from the SEC.
+
+Extracted text is cached separately, keyed on ``parse.PARSER_VERSION``, so a
+parser change invalidates the text and leaves the HTML alone.
 """
 
 from __future__ import annotations
 
+import gzip
 import json
-import re
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
 from typing import Iterator
 
 import requests
+
+from corpus.parse import PARSER_VERSION, html_to_text
 
 #: SEC fair-access policy requires a descriptive UA with a contact address and
 #: caps traffic at 10 requests/second. We run below the cap deliberately.
@@ -74,8 +83,10 @@ class EdgarClient:
             {"User-Agent": user_agent, "Accept-Encoding": "gzip, deflate"}
         )
         self.cache = cache_dir
-        (self.cache / "json").mkdir(parents=True, exist_ok=True)
-        (self.cache / "text").mkdir(parents=True, exist_ok=True)
+        self.html_dir = self.cache / "html"
+        self.text_dir = self.cache / f"text_v{PARSER_VERSION}"
+        for d in (self.cache / "json", self.html_dir, self.text_dir):
+            d.mkdir(parents=True, exist_ok=True)
         self._limiter = _RateLimiter(MAX_RPS)
 
     # -- http ----------------------------------------------------------
@@ -155,46 +166,29 @@ class EdgarClient:
 
     # -- document text -------------------------------------------------
 
-    def text(self, filing: Filing) -> str:
-        """Plain text of the primary document, cached by accession."""
-        path = self.cache / "text" / f"{filing.accession}.txt"
+    def raw_html(self, filing: Filing) -> str:
+        """Source HTML of the primary document, cached gzipped by accession."""
+        path = self.html_dir / f"{filing.accession}.html.gz"
         if path.exists():
-            return path.read_text(errors="ignore")
-        body = html_to_text(self._get(filing.url).text)
-        path.write_text(body)
+            with gzip.open(path, "rt", errors="ignore") as fh:
+                return fh.read()
+        body = self._get(filing.url).text
+        with gzip.open(path, "wt") as fh:
+            fh.write(body)
         return body
 
+    def text(self, filing: Filing) -> str:
+        """Visible text of the primary document, cached by accession + parser.
 
-# ---------------------------------------------------------------- html
-
-
-_SCRIPT_STYLE = re.compile(r"<(script|style)[^>]*>.*?</\1>", re.S | re.I)
-_TAG = re.compile(r"<[^>]+>")
-_ENTITY = {
-    "&nbsp;": " ", "&#160;": " ", "&amp;": "&", "&lt;": "<", "&gt;": ">",
-    "&quot;": '"', "&#39;": "'", "&rsquo;": "'", "&lsquo;": "'",
-    "&ldquo;": '"', "&rdquo;": '"', "&mdash;": "—", "&ndash;": "–",
-}
-_WS = re.compile(r"[ \t\r\f\v]+")
-_BLANKS = re.compile(r"\n{3,}")
-
-
-def html_to_text(html: str) -> str:
-    """Dependency-free HTML strip, tuned for EDGAR filings.
-
-    Block-level tags become newlines so that Item headers survive as line
-    starts — section extraction downstream depends on that. Modern filings are
-    inline XBRL, which is still HTML for our purposes.
-    """
-    text = _SCRIPT_STYLE.sub(" ", html)
-    text = re.sub(r"<(br|/p|/div|/tr|/h[1-6]|/li)[^>]*>", "\n", text, flags=re.I)
-    text = _TAG.sub(" ", text)
-    for k, v in _ENTITY.items():
-        text = text.replace(k, v)
-    text = re.sub(r"&#\d+;", " ", text)
-    text = _WS.sub(" ", text)
-    text = "\n".join(line.strip() for line in text.split("\n"))
-    return _BLANKS.sub("\n\n", text).strip()
+        Re-derived from cached HTML when the parser version moves, so bumping
+        `PARSER_VERSION` costs CPU rather than another 2,500 SEC requests.
+        """
+        path = self.text_dir / f"{filing.accession}.txt"
+        if path.exists():
+            return path.read_text(errors="ignore")
+        body = html_to_text(self.raw_html(filing))
+        path.write_text(body)
+        return body
 
 
 def iter_universe_filings(

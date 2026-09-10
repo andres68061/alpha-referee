@@ -1,0 +1,11 @@
+filings: 2474  firms: 185
+
+period_end: naive — signal dated at fiscal period end
+  FAILED  2474/2474 rows breach the embargo (100.0%), of which 2474 predate the filing entirely; median gap -50d, min -389d
+
+acceptance: honest — one trading day after EDGAR acceptance
+  PASSED  0/2474 rows breach the embargo (0.0%), of which 0 predate the filing entirely; median gap 2d, min 1d
+
+100.0% of rows lookahead under the naive alignment (median 50 days of foresight), 0.0% under the honest one
+
+wrote /Users/andres/Downloads/Cursor/alpha-referee/report/pit_check.md

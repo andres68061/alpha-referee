@@ -1,0 +1,46 @@
+filings: 2474  firms: 185
+
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/datetimelike.py", line 1201, in _sub_datetimelike
+    self._assert_tzawareness_compat(other)
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/datetimes.py", line 796, in _assert_tzawareness_compat
+    raise TypeError(
+TypeError: Cannot compare tz-naive and tz-aware datetime-like objects.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/andres/Downloads/Cursor/alpha-referee/referee/runlog.py", line 131, in run
+    yield record
+  File "/Users/andres/Downloads/Cursor/alpha-referee/report/pit_check.py", line 59, in main
+    stats = pit.audit(frame)
+            ^^^^^^^^^^^^^^^^
+  File "/Users/andres/Downloads/Cursor/alpha-referee/referee/pit.py", line 44, in audit
+    pd.to_datetime(aligned[signal_date_col])
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/ops/common.py", line 85, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arraylike.py", line 198, in __sub__
+    return self._arith_method(other, operator.sub)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/series.py", line 6751, in _arith_method
+    return base.IndexOpsMixin._arith_method(self, other, op)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/base.py", line 1644, in _arith_method
+    result = ops.arithmetic_op(lvalues, rvalues, op)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/ops/array_ops.py", line 279, in arithmetic_op
+    res_values = op(left, right)
+                 ^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/ops/common.py", line 85, in new_method
+    return method(self, other)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/datetimelike.py", line 1501, in __sub__
+    result = self._sub_datetime_arraylike(other)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/datetimelike.py", line 1192, in _sub_datetime_arraylike
+    return self._sub_datetimelike(other)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.12/site-packages/pandas/core/arrays/datetimelike.py", line 1204, in _sub_datetimelike
+    raise type(err)(new_message) from err
+TypeError: Cannot subtract tz-naive and tz-aware datetime-like objects.

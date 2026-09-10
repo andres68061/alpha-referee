@@ -23,6 +23,30 @@ from referee.verdict import Gate, Step
 #: One full trading day is the conservative default.
 DEFAULT_EMBARGO_DAYS = 1
 
+#: ``signal_date`` is a trading *date*, not an instant. Comparing a date
+#: against a timestamp requires committing to when in the session the trade
+#: happens, and that choice is worth up to a full session of apparent gap — so
+#: it is stated here rather than left to whatever timezone the frame arrived
+#: with. The close is the conservative end of the range: it is the latest we
+#: could have traded, and it is where a monthly-rebalanced decile book prices.
+EXECUTION_TIME = "16:00"
+EXECUTION_TZ = "America/New_York"
+
+
+def _to_utc_instant(dates, *, at_close: bool) -> pd.Series:
+    """Coerce dates or timestamps to tz-aware UTC instants.
+
+    Naive values are read as wall-clock times in ``EXECUTION_TZ`` — a trading
+    date is an exchange-local concept, and silently treating it as UTC would
+    shift every date five hours and quietly change the lookahead count.
+    """
+    ts = pd.to_datetime(dates)
+    if at_close and getattr(ts.dt, "tz", None) is None and (ts.dt.time == pd.Timestamp("00:00").time()).all():
+        ts = ts.dt.normalize() + pd.Timedelta(EXECUTION_TIME + ":00")
+    if getattr(ts.dt, "tz", None) is None:
+        ts = ts.dt.tz_localize(EXECUTION_TZ, nonexistent="shift_forward", ambiguous=True)
+    return ts.dt.tz_convert("UTC")
+
 
 def audit(
     aligned: pd.DataFrame,
@@ -40,14 +64,18 @@ def audit(
         Summary with ``n_lookahead`` (rows the signal could not have known),
         ``pct_lookahead``, and the median gap in calendar days.
     """
-    gap = (
-        pd.to_datetime(aligned[signal_date_col])
-        - pd.to_datetime(aligned[acceptance_col])
-    ).dt.total_seconds() / 86400.0
+    traded = _to_utc_instant(aligned[signal_date_col], at_close=True)
+    public = _to_utc_instant(aligned[acceptance_col], at_close=False)
+    gap = (traded - public).dt.total_seconds() / 86400.0
 
+    # Two distinct failures, reported separately: trading a document that did
+    # not exist (impossible), and trading one that existed but not long enough
+    # to have been read (implausible). Collapsing them hides which one it is.
+    impossible = gap < 0
     violations = gap < embargo_days
     return {
         "n": int(len(gap)),
+        "n_impossible": int(impossible.sum()),
         "n_lookahead": int(violations.sum()),
         "pct_lookahead": float(violations.mean() * 100.0),
         "median_gap_days": float(gap.median()),
@@ -63,8 +91,9 @@ def gate(panel, signal, ctx) -> Step:
         sharpe=None,
         passed=clean,
         detail=(
-            f"{stats['n_lookahead']}/{stats['n']} rows use text before it was public "
-            f"({stats['pct_lookahead']:.1f}%); median gap "
+            f"{stats['n_lookahead']}/{stats['n']} rows breach the embargo "
+            f"({stats['pct_lookahead']:.1f}%), of which {stats['n_impossible']} "
+            f"predate the filing entirely; median gap "
             f"{stats['median_gap_days']:.0f}d, min {stats['min_gap_days']:.0f}d"
         ),
     )

@@ -20,6 +20,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from adapters import quant_lake  # noqa: E402
 from corpus.edgar import EdgarClient, Filing  # noqa: E402
+from referee import runlog  # noqa: E402
 
 INDEX_PATH = Path(__file__).resolve().parent / "filings_index.parquet"
 
@@ -73,9 +74,12 @@ def build(
     print(f"\nindex: {len(index)} filings, {index['ticker'].nunique()} firms -> {INDEX_PATH}")
 
     if text:
-        print("\ndownloading documents (cached by accession)...")
+        # One document per accession. GOOG and GOOGL share Alphabet's filing,
+        # so iterating the index directly would fetch and parse it twice.
+        docs = index.drop_duplicates("accession")
+        print(f"\ndownloading {len(docs)} documents (cached by accession)...")
         done = failed = 0
-        for row in index.itertuples():
+        for row in docs.itertuples():
             f = Filing(
                 cik=row.cik, ticker=row.ticker, form=row.form,
                 accession=row.accession, period_end=row.period_end,
@@ -90,7 +94,7 @@ def build(
                 failed += 1
                 print(f"  {row.ticker} {row.accession}: {exc}")
             if done % 100 == 0 and done:
-                print(f"  {done}/{len(index)} documents", flush=True)
+                print(f"  {done}/{len(docs)} documents", flush=True)
         print(f"\ndocuments: {done} ok, {failed} failed")
 
     return index
@@ -105,14 +109,24 @@ def main() -> None:
     p.add_argument("--index-name", default="sp500")
     p.add_argument("--no-text", action="store_true", help="build the index only")
     a = p.parse_args()
-    build(
-        top_n=a.top_n,
-        start=a.start,
-        end=a.end,
-        forms=tuple(x.strip() for x in a.forms.split(",")),
-        index_name=a.index_name or None,
-        text=not a.no_text,
-    )
+    with runlog.run(
+        "corpus.fetch",
+        top_n=a.top_n, start=a.start, end=a.end,
+        forms=a.forms, index_name=a.index_name, text=not a.no_text,
+    ) as rec:
+        index = build(
+            top_n=a.top_n,
+            start=a.start,
+            end=a.end,
+            forms=tuple(x.strip() for x in a.forms.split(",")),
+            index_name=a.index_name or None,
+            text=not a.no_text,
+        )
+        rec.note(
+            f"{len(index)} index rows, {index['accession'].nunique()} unique "
+            f"accessions, {index['ticker'].nunique()} firms"
+        )
+        rec.output(INDEX_PATH)
 
 
 if __name__ == "__main__":

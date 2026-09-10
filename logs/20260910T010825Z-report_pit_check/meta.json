@@ -1,0 +1,19 @@
+{
+  "run": "report.pit_check",
+  "started_utc": "2026-09-10T01:08:25.149175+00:00",
+  "commit": "27dc2a5+dirty",
+  "argv": [
+    "/Users/andres/Downloads/Cursor/alpha-referee/report/pit_check.py"
+  ],
+  "python": "3.12.2",
+  "params": {},
+  "ended_utc": "2026-09-10T01:08:26.422908+00:00",
+  "seconds": 1.3,
+  "status": "ok",
+  "notes": [
+    "100.0% of rows lookahead under the naive alignment (median 50 days of foresight), 0.0% under the honest one"
+  ],
+  "outputs": [
+    "/Users/andres/Downloads/Cursor/alpha-referee/report/pit_check.md"
+  ]
+}

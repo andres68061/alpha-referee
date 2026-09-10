@@ -1,0 +1,390 @@
+universe: 200 names by median dollar ADV 2012-01-01..2025-12-31
+  [1/200] AAPL: 14 filings
+  [2/200] AMZN: 14 filings
+  [3/200] META: 13 filings
+  [4/200] MSFT: 14 filings
+  [5/200] NVDA: 14 filings
+  [6/200] TSLA: 14 filings
+  [7/200] GOOGL: 10 filings
+  [8/200] GOOG: 10 filings
+  [9/200] NFLX: 14 filings
+  [10/200] AMD: 14 filings
+  [11/200] BAC: 14 filings
+  [12/200] JPM: 14 filings
+  [13/200] BA: 14 filings
+  [14/200] V: 14 filings
+  [15/200] INTC: 14 filings
+  [16/200] MU: 14 filings
+  [17/200] DIS: 7 filings
+  [18/200] C: 14 filings
+  [19/200] PYPL: 10 filings
+  [20/200] WFC: 14 filings
+  [21/200] XOM: 0 filings
+  [22/200] GE: 14 filings
+  [23/200] CRM: 14 filings
+  [24/200] BKNG: 14 filings
+  [25/200] UNH: 14 filings
+  [26/200] JNJ: 14 filings
+  [27/200] MA: 14 filings
+  [28/200] CSCO: 14 filings
+  [29/200] HD: 14 filings
+  [30/200] QCOM: 14 filings
+  [31/200] ADBE: 14 filings
+  [32/200] WMT: 14 filings
+  [33/200] PG: 14 filings
+  [35/200] PFE: 14 filings
+  [36/200] XYZ: 10 filings
+  [37/200] CMCSA: 14 filings
+  [38/200] ORCL: 14 filings
+  [39/200] AVGO: 8 filings
+  [40/200] CVX: 14 filings
+  [41/200] GS: 14 filings
+  [42/200] MRK: 14 filings
+  [43/200] T: 14 filings
+  [44/200] MCD: 14 filings
+  [45/200] NKE: 14 filings
+  [46/200] VZ: 14 filings
+  [47/200] ABBV: 13 filings
+  [48/200] IBM: 14 filings
+  [49/200] KO: 14 filings
+  [50/200] SBUX: 14 filings
+  [51/200] CAT: 14 filings
+  [52/200] COST: 14 filings
+  [53/200] GILD: 14 filings
+  [54/200] MRNA: 7 filings
+  [55/200] AMGN: 14 filings
+  [56/200] UNP: 14 filings
+  [57/200] TXN: 14 filings
+  [58/200] BMY: 14 filings
+  [59/200] CHTR: 14 filings
+  [60/200] LOW: 14 filings
+  [61/200] GM: 14 filings
+  [62/200] NOW: 13 filings
+  [63/200] AMAT: 14 filings
+  [64/200] PEP: 14 filings
+  [65/200] LLY: 14 filings
+  [66/200] LRCX: 14 filings
+  [67/200] CVS: 14 filings
+  [68/200] CMG: 14 filings
+  [69/200] SLB: 14 filings
+  [70/200] RTX: 14 filings
+  [71/200] FCX: 14 filings
+  [72/200] MDT: 11 filings
+  [73/200] HON: 14 filings
+  [74/200] DAL: 14 filings
+  [75/200] ABT: 14 filings
+  [76/200] REGN: 14 filings
+  [77/200] AXP: 14 filings
+  [78/200] SE: 0 filings
+  [79/200] TGT: 14 filings
+  [80/200] MS: 14 filings
+  [81/200] TMO: 14 filings
+  [82/200] AAL: 14 filings
+  [84/200] ISRG: 14 filings
+  [85/200] COP: 14 filings
+  [86/200] EBAY: 14 filings
+  [87/200] BIIB: 14 filings
+  [89/200] LMT: 14 filings
+  [90/200] OXY: 14 filings
+  [91/200] MMM: 14 filings
+  [92/200] NXPI: 6 filings
+  [93/200] TTD: 9 filings
+  [94/200] ELV: 14 filings
+  [95/200] UAL: 14 filings
+  [96/200] F: 14 filings
+  [97/200] FDX: 14 filings
+  [98/200] SCHW: 14 filings
+  [99/200] CI: 7 filings
+  [100/200] HAL: 14 filings
+  [101/200] CSX: 14 filings
+  [102/200] DE: 14 filings
+  [103/200] WDAY: 13 filings
+  [104/200] ACN: 14 filings
+  [105/200] INTU: 14 filings
+  [106/200] MDLZ: 14 filings
+  [107/200] PANW: 14 filings
+  [108/200] NEE: 14 filings
+  [109/200] PM: 14 filings
+  [110/200] TJX: 14 filings
+  [111/200] CVNA: 8 filings
+  [112/200] HUM: 14 filings
+  [113/200] LULU: 14 filings
+  [114/200] AMT: 14 filings
+  [115/200] AIG: 14 filings
+  [116/200] DHR: 14 filings
+  [117/200] AZO: 14 filings
+  [118/200] VRTX: 14 filings
+  [119/200] UPS: 14 filings
+  [121/200] EOG: 14 filings
+  [122/200] DG: 14 filings
+  [123/200] BSX: 14 filings
+  [124/200] SHW: 14 filings
+  [125/200] NOC: 14 filings
+  [126/200] ADSK: 14 filings
+  [127/200] LIN: 8 filings
+  [128/200] TMUS: 14 filings
+  [129/200] ILMN: 14 filings
+  [130/200] MPC: 14 filings
+  [131/200] NEM: 14 filings
+  [132/200] MAR: 14 filings
+  [133/200] ULTA: 14 filings
+  [134/200] VLO: 14 filings
+  [135/200] SPGI: 14 filings
+  [136/200] LUV: 14 filings
+  [137/200] ADP: 14 filings
+  [138/200] DD: 8 filings
+  [139/200] WYNN: 14 filings
+  [140/200] USB: 14 filings
+  [141/200] ORLY: 14 filings
+  [143/200] EXPE: 14 filings
+  [144/200] MO: 14 filings
+  [145/200] BLK: 1 filings
+  [146/200] LVS: 14 filings
+  [147/200] MCK: 14 filings
+  [148/200] HCA: 14 filings
+  [149/200] WDC: 14 filings
+  [150/200] BDX: 14 filings
+  [151/200] ADI: 14 filings
+  [152/200] DLTR: 14 filings
+  [153/200] EL: 14 filings
+  [155/200] HLT: 12 filings
+  [156/200] NSC: 14 filings
+  [157/200] ZTS: 13 filings
+  [158/200] COF: 14 filings
+  [159/200] CCL: 14 filings
+  [160/200] KR: 14 filings
+  [161/200] MET: 14 filings
+  [162/200] CL: 14 filings
+  [163/200] STZ: 14 filings
+  [164/200] PNC: 14 filings
+  [165/200] HPQ: 14 filings
+  [166/200] EQIX: 14 filings
+  [167/200] EW: 14 filings
+  [168/200] CTSH: 14 filings
+  [170/200] FISV: 14 filings
+  [171/200] DUK: 14 filings
+  [172/200] SYK: 14 filings
+  [173/200] ETSY: 10 filings
+  [174/200] KHC: 10 filings
+  [175/200] CB: 14 filings
+  [176/200] PARA: 5 filings
+  [177/200] PSX: 13 filings
+  [178/200] PSKY: 0 filings
+  [179/200] CNC: 14 filings
+  [180/200] ANET: 11 filings
+  [181/200] CME: 14 filings
+  [183/200] ICE: 12 filings
+  [184/200] RCL: 14 filings
+  [185/200] MCHP: 14 filings
+  [186/200] GD: 14 filings
+  [187/200] SO: 14 filings
+  [188/200] KMI: 14 filings
+  [189/200] URI: 14 filings
+  [190/200] EMR: 14 filings
+  [192/200] ALGN: 14 filings
+  [193/200] MGM: 14 filings
+  [194/200] CCI: 14 filings
+  [195/200] APD: 14 filings
+  [196/200] ROST: 14 filings
+  [198/200] EXC: 14 filings
+  [200/200] LEN: 14 filings
+
+unresolved tickers (11): ['TWTR', 'ATVI', 'ANTM', 'EA', 'WBA', 'PXD', 'X', 'FI', 'MRO', 'BK', 'HES']
+
+index: 2484 filings, 186 firms -> /Users/andres/Downloads/Cursor/alpha-referee/corpus/filings_index.parquet
+
+downloading 2474 documents (cached by accession)...
+  AAL 0000006201-20-000023: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AAL 0000006201-24-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AAL 0000006201-25-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AAPL 0000320193-19-000119: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AAPL 0000320193-24-000123: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AAPL 0000320193-25-000079: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ABBV 0001551152-20-000007: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ABBV 0001551152-24-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ABBV 0001551152-25-000020: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ABT 0001104659-20-023904: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ABT 0001104659-21-025751: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ABT 0001104659-22-025141: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ABT 0001628280-24-005348: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ABT 0001628280-25-007110: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ACN 0001467373-17-000430: Response ended prematurely
+  ACN 0001467373-19-000339: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ACN 0001467373-24-000278: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ACN 0001467373-25-000217: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADBE 0000796343-20-000013: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADBE 0000796343-25-000004: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADI 0000006281-15-000044: HTTPSConnectionPool(host='www.sec.gov', port=443): Read timed out. (read timeout=45)
+  ADI 0000006281-24-000204: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADI 0000006281-25-000153: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADP 0000008670-24-000024: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADP 0000008670-25-000037: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADSK 0000769397-18-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADSK 0000769397-19-000016: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADSK 0000769397-20-000013: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADSK 0000769397-24-000090: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ADSK 0000769397-25-000019: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  100/2474 documents
+  AIG 0001104659-20-023889: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AIG 0001104659-21-025742: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AIG 0001104659-22-024701: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AIG 0000005272-24-000023: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AIG 0000005272-25-000012: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ALGN 0001097149-20-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ALGN 0001097149-24-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ALGN 0001097149-25-000012: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMAT 0000006951-24-000044: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMAT 0001628280-25-056742: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMD 0000002488-20-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMD 0000002488-24-000012: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMD 0000002488-25-000012: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMGN 0000318154-20-000017: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMGN 0000318154-24-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMGN 0000318154-25-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMT 0001053507-20-000028: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMT 0001053507-24-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMT 0001053507-25-000025: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMZN 0001018724-20-000004: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMZN 0001018724-24-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AMZN 0001018724-25-000004: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ANET 0001596532-20-000024: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ANET 0001596532-24-000043: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  ANET 0001596532-25-000028: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  APD 0000002969-18-000044: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  APD 0000002969-19-000051: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  APD 0000002969-24-000056: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  APD 0000002969-25-000055: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AVGO 0001730168-19-000144: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AVGO 0001730168-24-000139: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AVGO 0001730168-25-000121: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  200/2474 documents
+  AXP 0000004962-24-000013: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AXP 0000004962-25-000016: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AZO 0001558370-20-011748: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AZO 0001558370-21-013446: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AZO 0001558370-22-015239: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AZO 0001558370-23-016668: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AZO 0001558370-24-013758: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  AZO 0001104659-25-102611: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BA 0000012927-19-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BA 0000012927-20-000014: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BA 0000012927-24-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BA 0000012927-25-000015: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BAC 0000070858-19-000012: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BAC 0000070858-20-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BAC 0000070858-24-000122: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BAC 0000070858-25-000139: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BDX 0000010795-19-000044: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BDX 0000010795-24-000084: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BDX 0000010795-25-000099: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BIIB 0000875045-20-000005: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BIIB 0000875045-24-000009: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BIIB 0000875045-25-000009: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BKNG 0001075531-20-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BKNG 0001075531-24-000014: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BKNG 0001075531-25-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BLK 0000950170-25-026584: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BMY 0000014272-20-000082: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BMY 0000014272-24-000044: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BMY 0000014272-25-000039: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BSX 0000885725-20-000012: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BSX 0000885725-24-000017: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  BSX 0000885725-25-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  C 0000831001-20-000031: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  300/2474 documents
+  C 0000831001-24-000033: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  300/2474 documents
+  C 0000831001-25-000067: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  300/2474 documents
+  CAT 0000018230-20-000056: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CAT 0000018230-24-000009: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CAT 0000018230-25-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CB 0000896159-20-000003: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CB 0000896159-24-000003: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CB 0000896159-25-000004: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CCI 0001051470-20-000077: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CCI 0001051470-24-000062: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CCI 0001051470-25-000089: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CCL 0000815097-20-000003: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CCL 0000815097-25-000007: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CHTR 0001091667-20-000024: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CHTR 0001091667-24-000028: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CHTR 0001091667-25-000034: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CI 0001739940-20-000006: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CI 0001739940-24-000005: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CI 0001739940-25-000009: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CL 0000021665-20-000004: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CL 0000021665-24-000003: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CL 0000021665-25-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CMCSA 0001166691-20-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CMCSA 0001166691-24-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CMCSA 0001166691-25-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CME 0001156375-20-000013: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CME 0001156375-24-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CME 0001156375-25-000021: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  400/2474 documents
+  CMG 0001058090-20-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CMG 0001058090-21-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CMG 0001058090-22-000011: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CMG 0001058090-23-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CMG 0001562762-24-000023: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CMG 0001058090-25-000014: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CNC 0001071739-20-000060: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CNC 0001071739-24-000037: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CNC 0001071739-25-000027: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COF 0000927628-19-000093: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COF 0000927628-20-000102: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COF 0000927628-24-000094: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COF 0000927628-25-000092: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COP 0001193125-20-039954: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COP 0001562762-21-000027: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COP 0001562762-22-000031: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COP 0001163165-24-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COP 0001163165-25-000012: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COST 0000909832-24-000049: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  COST 0000909832-25-000101: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CRM 0001108524-24-000005: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CRM 0001108524-25-000006: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CSCO 0000858877-20-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CSCO 0000858877-24-000017: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CSCO 0000858877-25-000111: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CSX 0000277948-20-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CSX 0000277948-24-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CSX 0000277948-25-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CTSH 0001058290-20-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CTSH 0001058290-24-000017: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CTSH 0001058290-25-000017: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CVNA 0001690820-24-000093: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CVNA 0001690820-25-000074: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  500/2474 documents
+  CVS 0000064803-20-000007: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CVS 0000064803-24-000007: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CVS 0000064803-25-000007: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CVX 0000093410-20-000010: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CVX 0000093410-24-000013: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  CVX 0000093410-25-000009: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DAL 0000027904-17-000004: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DAL 0000027904-18-000006: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DAL 0000027904-19-000003: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DAL 0000027904-24-000003: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DAL 0000027904-25-000004: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DD 0001666700-20-000006: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DD 0001666700-24-000008: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DD 0001666700-25-000005: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DE 0001558370-19-011614: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DE 0001558370-20-014436: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DE 0001558370-21-016864: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DE 0001558370-22-018703: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DE 0001558370-23-019812: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DE 0001558370-24-016169: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DE 0001104659-25-122321: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DG 0001558370-20-002915: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DG 0001558370-21-003245: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DG 0001558370-22-003921: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DG 0001558370-23-004574: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DG 0001558370-24-003813: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DG 0001558370-25-003413: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DHR 0000313616-20-000041: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DHR 0000313616-24-000052: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DHR 0000313616-25-000043: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.
+  DIS 0001744489-19-000225: Unicode strings with encoding declaration are not supported. Please use bytes input or XML fragments without declaration.

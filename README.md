@@ -43,6 +43,30 @@ A signal that clears every gate gets `Verdict.SURVIVES`. Everything else records
 
 ---
 
+## Result — Gate 0, point-in-time
+
+The first number in this repo is a failure, produced on purpose.
+
+Corpus: **2,474 10-K filings, 185 firms, 2012–2025**, top 200 by dollar volume,
+each carrying EDGAR's `acceptanceDateTime`.
+
+| alignment | rows | breach embargo | predate the filing | median gap |
+|---|---|---|---|---|
+| naive — signal dated at fiscal period end | 2,474 | 2,474 (100.0%) | 2,474 | **−50 days** |
+| honest — one trading day after acceptance | 2,474 | 0 (0.0%) | 0 | +2 days |
+
+A replication that dates each 10-K signal at the fiscal period end — the date
+the financial data describes — is trading on a document that does not exist
+yet, on **every single row**, with a median of 50 days of foresight and a worst
+case of 389. Nobody sets out to do this; it is what you get by joining a signal
+to a fundamentals panel on `period_end` and not asking when the text arrived.
+
+The honest alignment trades one full trading day after EDGAR accepted the
+filing, at the close. Reproduce with `python -m report.pit_check`; the run is
+recorded in `logs/`.
+
+---
+
 ## Signals implemented
 
 Each is a published, named claim — not an invention — so replication failure is
@@ -50,7 +74,7 @@ a result rather than an excuse.
 
 | Module | Claim | Source |
 |---|---|---|
-| `signals/lazy_prices.py` | Year-over-year 10-K text similarity predicts returns; firms that change their filing language underperform | Cohen, Malloy & Nguyen (2020), *Lazy Prices*, JF |
+| `signals/lazy_prices.py` ✅ built | Year-over-year 10-K text similarity predicts returns; firms that change their filing language underperform | Cohen, Malloy & Nguyen (2020), *Lazy Prices*, JF |
 | `signals/lm_sentiment.py` | Finance-specific negative-word tone in MD&A predicts returns | Loughran & McDonald (2011), JF |
 | `signals/risk_novelty.py` | Newly-appearing Item 1A risk language predicts returns | risk-disclosure literature |
 | `signals/embeddings.py` | Sentence-embedding distance as a continuous replacement for (1) and (3) | — |
@@ -70,7 +94,14 @@ does the embedding version buy anything once both are deflated by an honest `N`?
     referee/      the gates, in order
     trials/       append-only hash-chained ledger — every variant ever run
     report/       the decay waterfall
-    docs/         method notes
+    logs/         machine-written record of every execution (runlog.py)
+    docs/         method notes, and DECISIONS.md — the judgement calls, dated
+
+Three records, deliberately separate. The **trial ledger** answers "how many
+variants did you try before showing me this one?", which is what the deflated
+Sharpe needs. The **run log** answers "what produced this file, on which
+commit, and did it finish?". **DECISIONS.md** answers "why is it built this
+way?" — the calls a reader would otherwise reverse-engineer from the code.
 
 ## Data
 
